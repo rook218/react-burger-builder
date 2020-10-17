@@ -1,12 +1,17 @@
 import React from 'react';
-import classes from './Modal.module.css'
+import classes from './Modal.module.css';
+import Aux from '../../../hoc/Auxiliary';
+import Backdrop from '../Backdrop/Backdrop';
 
 const modal = props => {
 	const activeClasses = `${classes.Modal} ${props.show ? classes.ModalShow : classes.ModalHide}`
 	return(
-		<div className={activeClasses}>
-			{props.children}
-		</div>
+		<Aux>
+			<Backdrop show={props.show} clicked={props.modalClosed}/>
+			<div className={activeClasses}>
+				{props.children}
+			</div>
+		</Aux>
 	)
 }
 

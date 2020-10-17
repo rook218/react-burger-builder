@@ -1,27 +1,19 @@
 import React from 'react';
 import Aux from '../../hoc/Auxiliary';
 
-import Toolbar from './Toolbar/Toolbar'
-import SideDrawer from './SideDrawer/SideDrawer'
+import Toolbar from '../Navigation/Toolbar/Toolbar';
+import SideDrawer from '../Navigation/SideDrawer/SideDrawer';
 
-import classes from './Layout.module.css'
+import classes from './Layout.module.css';
 
-const layout = (props)  => {
-	return(
+const layout = props => {
+	return (
 		<Aux>
-			<div>
-				<Toolbar>
-
-				</Toolbar>
-				<SideDrawer>
-
-				</SideDrawer>
-			</div>
-			<main>
-				{props.children}
-			</main>
+			<Toolbar />
+			<SideDrawer />
+			<main className={classes.Content}>{props.children}</main>
 		</Aux>
-	)
-}
+	);
+};
 
 export default layout;
