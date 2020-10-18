@@ -3,7 +3,7 @@
 // with the rest of the course content.
 
 import React from "react";
-import Layout from './components/Layout/Layout';
+import Layout from './containers/Layout/Layout';
 import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder';
 
 function App() {
