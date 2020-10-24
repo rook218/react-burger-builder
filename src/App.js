@@ -3,16 +3,23 @@
 // with the rest of the course content.
 
 import React from "react";
+import {
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+
 import Layout from './containers/Layout/Layout';
 import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder';
+import Checkout from './containers/Checkout/Checkout'
 
 function App() {
   return (
 		<div>
 			<Layout>
-				<BurgerBuilder>
-
-				</BurgerBuilder>
+				<Route path="/" exact component={BurgerBuilder} />
+				<Route path="/checkout" component={Checkout} />
 			</Layout>
 		</div>
 	);
